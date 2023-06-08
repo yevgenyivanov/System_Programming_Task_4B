@@ -6,33 +6,14 @@
 #include "TrainedNinja.hpp"
 #include "OldNinja.hpp"
 #include "Team.hpp"
-#include "Team2.hpp"
 
-class SmartTeam
+class SmartTeam : public Team
 {
 private:
-    std::vector<Character *> _teamMembers = {};
-
-// public:
-//     // constructor
-//     SmartTeam(Character *);
-//     // copy constructor
-//     SmartTeam(SmartTeam &);
-//     // copy assignment operator
-//     SmartTeam &operator=(const SmartTeam &) noexcept;
-//     // move constructor
-//     SmartTeam(SmartTeam &&) noexcept;
-//     // move assignment operator
-//     SmartTeam &operator=(SmartTeam &&) noexcept;
-//     // destructor
-//     ~SmartTeam();
-//     //
-//     void add(Character *);
-//     // void attack(Team *);
-//     // void attack(Team2 *);
-//     void attack(SmartTeam *);
-//     int stillAlive();
-//     void print();
+    // std::vector<Character *> _teamMembers = {};
+public:
+    SmartTeam(Character *);
+    void attack(Team *_enemyTeam) override;
 };
 
 namespace ariel
